@@ -1,0 +1,12 @@
+ErrorDocument 403 /Mon-blog_mvc/view/error.php
+ErrorDocument 404 /Mon-blog_mvc/view/error.php
+ErrorDocument 405 /Mon-blog_mvc/view/error.php
+ErrorDocument 408 /Mon-blog_mvc/view/error.php
+ErrorDocument 500 /Mon-blog_mvc/view/error.php
+ErrorDocument 502 /Mon-blog_mvc/view/error.php
+ErrorDocument 504 /Mon-blog_mvc/view/error.php
+
+RewriteEngine On
+RewriteRule ^([^_]*)_([^_]*)\.html$ /Mon-blog_mvc/?p=$1&a=$2 [L]
+RewriteRule ^([^_]*)_([^_]*)_([^_]*)\.html$ /Mon-blog_mvc/?p=$1&a=$2&id=$3 [L]
+RewriteRule ^([^_]*)_([^_]*)_([^_]*)_([^_]*)_([^_]*)\.html$ /Mon-blog_mvc/?p=$1&a=$2&postid=$3&commentId=$4&vote=$5 [L]
